@@ -6,11 +6,13 @@ function Snake() {
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
+  var score =0;
 
   this.eat = function(pos) {
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
         this.total++;
+        score++;
         return true;
       } else {
         return false;
@@ -26,7 +28,9 @@ function Snake() {
       var pos = this.tail[i];
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
+        alert("Score: "+score);
         console.log('starting over');
+        score=0;
         this.total = 0;
         this.tail = [];
       }
