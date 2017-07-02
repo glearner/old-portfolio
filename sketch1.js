@@ -47,6 +47,7 @@ function draw() {
   {
     fill(255,0,100);
     ellipse(leaves[i].x,leaves[i].y,8, 8);
+leaves[i].y += random(0 , 2);
     //  tree[i].jitter();
   }
 

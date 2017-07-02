@@ -20,7 +20,7 @@ function Branch(begin,end) {
   this.branchA=function(){
 
     var dir =p5.Vector.sub(this.end,this.begin);
-    dir.rotate(PI/4);
+    dir.rotate(PI/6);
     dir.mult(0.67);
     var newEnd=p5.Vector.add(this.end, dir);
     var a=new Branch(this.end,newEnd);
