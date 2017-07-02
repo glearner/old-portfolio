@@ -22,7 +22,7 @@ function mousePressed(){
 
 }
 count++;
-if(count==5)
+if(count%3==0)
 {
 
   for(var i=0; i<tree.length; i++)
@@ -47,6 +47,7 @@ function draw() {
   {
     fill(255,0,100);
     ellipse(leaves[i].x,leaves[i].y,8, 8);
+    leaves[i].x += random(0 , 1);
 leaves[i].y += random(0 , 2);
     //  tree[i].jitter();
   }
